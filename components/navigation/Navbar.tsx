@@ -53,7 +53,7 @@ const Navbar = () => {
                 href="sign-up"
                 className={buttonVariants({
                   size: "sm",
-                  className: "hidden md:flex",
+                  className: "md:flex",
                 })}
               >
                 Comece Grátis
