@@ -19,14 +19,17 @@ import {
 } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 import Marquee from "@/components/ui/marquee";
+import { LampContainer } from "@/components/ui/lamp";
+import { Input } from "@/components/ui/input";
 
 const HomePage = () => {
   const firstRow = reviews.slice(0, reviews.length / 2);
   const secondRow = reviews.slice(reviews.length / 2);
   return (
-    <section className="w-full relative flex flex-col items-center justify-center px-4 md:px-0 py-8">
+    <section className="w-full relative flex flex-col items-center justify-center px-4 md:px-0">
       {/* HERO */}
-      <Wrapper>
+      <Wrapper id="home">
+        <div className="absolute inset-0 dark:bg-[linear-gradient(to_right,#e2e8f0_1px,transparent_1px),linear-gradient(to_bottom,#e2e8f0_1px,transparent_1px)] bg-[linear-gradient(to_right,#161616_1px,transparent_1px),linear-gradient(to_bottom,#161616_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_110%)] -z-10 h-[150vh]" />
         <Container>
           <div className="flex flex-col items-center justify-center py-20 w-full">
             <button className="group relative grid overflow-hidden rounded-full px-4 py-1 shadow-[0_1000px_0_0_hsl(0_0%_20%)_inset] transition-colors duration-200">
@@ -103,7 +106,7 @@ const HomePage = () => {
       </Wrapper>
 
       {/* COMO FUNCIONA */}
-      <Wrapper className="flex flex-col items-center justify-center py-12 relative">
+      <Wrapper id="about" className="flex flex-col items-center justify-center py-12 pt-20 relative">
         <Container>
           <div className="max-w-md mx-auto text-start md:text-center">
             <SectionBadge title="O processo" />
@@ -140,7 +143,7 @@ const HomePage = () => {
       </Wrapper>
 
       {/* RECURSOS */}
-      <Wrapper className="flex flex-col items-center justify-center py-12 relative">
+      <Wrapper id="features" className="flex flex-col items-center justify-center py-12 relative">
         <Container className="max-w-md mx-auto text-start md:text-center">
           <SectionBadge title="Recursos" />
           <h2 className="text-3xl lg:text-4xl font-semibold mt-6">
@@ -154,7 +157,7 @@ const HomePage = () => {
 
         <Container>
           <div className="flex items-center justify-center mx-auto mt-8">
-            <Icons.feature className="w-auto h-80" />
+            <Icons.feature className="w-auto h-60" />
           </div>
         </Container>
 
@@ -181,7 +184,7 @@ const HomePage = () => {
       </Wrapper>
 
       {/* PLANOS */}
-      <Wrapper className="flex flex-col items-center justify-center py-12 relative">
+      <Wrapper id="pricing" className="flex flex-col items-center justify-center py-12 relative">
         <Container>
           <div className="max-w-md md:mx-auto text-start md:text-center">
             <SectionBadge title="Planos" />
@@ -202,14 +205,14 @@ const HomePage = () => {
                 key={card.title}
                 className={cn(
                   "flex flex-col w-full border-neutral-700",
-                  card.title === "Unlimited Saas" && "border-2 border-primary"
+                  card.title === "PRO" && "border-2 border-primary"
                 )}
               >
                 <CardHeader className="borde-2 border-border">
                   <span>{card.title}</span>
                   <CardTitle
                     className={cn(
-                      card.title !== "Unlimited Saas" && "to-muted-foreground"
+                      card.title !== "PRO" && "to-muted-foreground"
                     )}
                   >
                     {card.price}
@@ -229,8 +232,7 @@ const HomePage = () => {
                     href="#"
                     className={cn(
                       "w-full text-center text-primary-foreground bg-primary p-2 rounded-md text-sm font-medium",
-                      card.title !== "Unlimited Saas" &&
-                        "!bg-foreground !text-background"
+                      card.title !== "PRO" && "!bg-foreground !text-background"
                     )}
                   >
                     {card.buttonText}
@@ -243,7 +245,7 @@ const HomePage = () => {
       </Wrapper>
 
       {/* PROVA SOCIAL */}
-      <Wrapper className="flex flex-col items-center justify-center py-12 relative">
+      <Wrapper id="testmonials" className="flex flex-col items-center justify-center pt-16 relative">
         <Container>
           <div className="max-w-md mx-auto text-start md:text-center">
             <SectionBadge title="Cases de Sucesso" />
@@ -308,8 +310,76 @@ const HomePage = () => {
                   </figure>
                 ))}
               </Marquee>
-              <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-background "/>
-              <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-background "/>
+              <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-background " />
+              <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-background " />
+            </div>
+          </div>
+        </Container>
+      </Wrapper>
+
+      {/* NEWS */}
+      <Wrapper id="news" className="flex flex-col items-center justify-center relative">
+        <Container>
+          <LampContainer>
+            <div className="flex flex-col items-center relative w-full text-center">
+              <h2 className="text-4xl lg:text-5xl xl:text-6xl lg:!leading-snug font-semibold mt-2">
+                O seu negócio,
+                <br />{" "}
+                <span className="bg-gradient-to-r from-[#0548D1] via-[#696DFF] to-[#0548D1] bg-clip-text text-transparent">
+                  Decolando
+                </span>{" "}
+                com Nitro.
+              </h2>
+              <p className="text-muted-foreground mt-6 max-w-md mx-auto">
+                Receba dados úteis em tempo real, crie relatórios personalizados
+                e aumente o seu faturamento com o Nitro.
+              </p>
+              <Button variant="white" className="mt-6" asChild>
+                <Link href="/sign-in">
+                  Comece de graça
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Link>
+              </Button>
+            </div>
+          </LampContainer>
+        </Container>
+        <Container className="relative z-50">
+          <div className="flex items-center justify-center w-full -mt-60">
+            <div className="flex flex-col md:flex-row items-start md:items-center justify-start md:justify-between w-full px-4 md:px-8 rounded-lg lg:rounded-2xl border border-border/80 py-4 md:py-8 ">
+              <div className="flex flex-col items-start gap-4 w-full">
+                <h4 className="text-xl md:text-2xl font-semibold">
+                  Fique por dentro
+                </h4>
+                <p className="text-base text-muted-foreground">
+                  Participe da Newsletter e fique por dentro das promoções do
+                  Nitro.
+                </p>
+              </div>
+              <div className="flex flex-col items-start gap-2 md:min-w-80 mt-5 md:mt-0 w-full md:w-max">
+                <form
+                  action="#"
+                  className="flex flex-col md:flex-row items-center gap-2 w-full md:max-w-xs"
+                >
+                  <Input
+                    required
+                    type="email"
+                    placeholder="Seu melhor e-mail"
+                    className="focus-visible:ring-0 focus-visible:ring-transparent focus-visible:border-primary duration-400 w-full"
+                  />
+                  <Button
+                    type="submit"
+                    size="sm"
+                    variant="secondary"
+                    className="w-full md:w-max"
+                  >
+                    Inscrever
+                  </Button>
+                </form>
+                <p className="text-sm text-muted-foreground">
+                  Ao se inscrever você está de acordo com nossa{" "}
+                  <Link href="#">Política de Privacidade</Link>
+                </p>
+              </div>
             </div>
           </div>
         </Container>

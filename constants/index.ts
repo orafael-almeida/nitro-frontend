@@ -3,153 +3,132 @@ import Icons from "@/components/global/icons";
 export const perks = [
   {
     icon: Icons.auth,
-    title: "Sign Up",
-    info: "Create your free account to get started with Astra.",
+    title: "Cadastre",
+    info: "Crie uma conta grátis para decolar com Nitro.",
   },
   {
     icon: Icons.customize,
-    title: "Customize",
-    info: "Choose a template and customize it to fit your needs.",
+    title: "Personalize",
+    info: "Escolha um template e personalize sua experiêncioa.",
   },
   {
     icon: Icons.launch,
-    title: "Launch",
-    info: "Publish your website and share it with the world.",
+    title: "Decole",
+    info: "Receba insigths valiosos e, gerencie e decole o seu negócio.",
   },
 ];
 
 export const features = [
   {
     icon: Icons.bolt,
-    title: "Fast Setup",
-    info: "Get your website up and running in minutes with our intuitive AI-powered builder.",
+    title: "Rápido e Fácil",
+    info: "Inicie a sua experiência com apenas alguns cliques",
   },
   {
     icon: Icons.palette,
-    title: "Customizable Templates",
-    info: "Choose from a variety of stunning templates and customize them to suit your brand.",
+    title: "Cores para todos",
+    info: "Uma grande variedade de cores para personalizar a sua interface.",
   },
   {
     icon: Icons.seo,
-    title: "SEO Optimized",
-    info: "Built-in SEO features ensure your website ranks well on search engines.",
+    title: "Dados em tempo real",
+    info: "Receba dados em tempo real e foque no que importa.",
   },
   {
     icon: Icons.monitor,
-    title: "Responsive Design",
-    info: "Your website will look great on any device, from desktops to mobile phones.",
+    title: "Design Responsivo",
+    info: "Experiência adaptada para todos os dispositivos.",
   },
   {
     icon: Icons.shop,
-    title: "E-Commerce Ready",
-    info: "Start selling online with our e-commerce features and integrations.",
+    title: "Sistema integrado",
+    info: "Venda on-line com integrações em diversas plataformas.",
   },
   {
     icon: Icons.server,
-    title: "Secure Hosting",
-    info: "Enjoy peace of mind with secure and reliable hosting for your website.",
+    title: "Segurança",
+    info: "Informações e dados seguros com a mais alta tecnologia.",
   },
 ];
 
 export const pricingCards = [
   {
-    title: "Starter",
-    description: "Perfect for trying out plura",
-    price: "Free",
+    title: "Básico",
+    description: "Perfeito para conhecer a plataforma",
+    price: "Grátis",
     duration: "",
     highlight: "Key features",
     buttonText: "Start for free",
-    features: ["Limited projects", "1 Team member", "Basic features"],
+    features: [
+      "10 Ambientes habilitados",
+      "2 Membros na equipe",
+      "Até 50 produtos",
+      "Recursos básicos",
+    ],
     priceId: "",
   },
   {
-    title: "Unlimited Saas",
-    description: "The ultimate agency kit",
-    price: "$199",
+    title: "PRO",
+    description: "Para empresas que desejam decolar.",
+    price: "R$ 199",
     duration: "month",
     highlight: "Key features",
     buttonText: "Upgrade to Pro",
     features: [
-      "Unlimited projects",
-      "5 Team members",
-      "Advanced design tools",
-      "Customizable domain",
+      "10 Ambientes habilitados",
+      "20 Membros na equipe",
+      "Até 500 produtos",
+      "Recursos avançados",
     ],
     priceId: "price_1OYxkqFj9oKEERu1KfJGWxgN",
   },
   {
-    title: "Enterprise",
-    description: "For serious agency owners",
-    price: "$399",
+    title: "EMPRESARIAL",
+    description: "Grandes empresas que desejam escalar.",
+    price: "R$ 499",
     duration: "month",
     highlight: "Everything in Starter, plus",
     buttonText: "Upgrade to Enterprise",
     features: [
-      "Unlimited projects",
-      "Unlimited Team members",
-      "Custom branding",
-      "Priority support (24/7)",
+      "Ambientes ilimitados",
+      "Até 100 Membros na equipe",
+      "Até 10.000 produtos",
+      "Recursos personalizados",
+      "Suporte 24/7",
     ],
     priceId: "price_1OYxkqFj9oKEERu1NbKUxXxN",
   },
 ];
 
-export const bentoCards = [
-  {
-    title: "Start with Inspiration",
-    info: "Browse our vast library of pre-designed templates or upload your own images.",
-    imgSrc: "/assets/bento-1.svg", // Lightbulb or Inspiration icon
-    alt: "Inspiration for website creation",
-  },
-  {
-    title: "AI Assists Your Vision",
-    info: "Our intelligent AI tailors suggestions and functionalities based on your goals.",
-    imgSrc: "/assets/bento1.svg", // AI Assistant icon
-    alt: "AI website building assistant",
-  },
-  {
-    title: "Drag & Drop Customization",
-    info: "Effortlessly personalize your website with our intuitive drag-and-drop editor.",
-    imgSrc: "/assets/bento1.svg", // Drag and Drop icon or hand editing a website
-    alt: "Website customization with drag and drop",
-  },
-  {
-    title: "Launch & Shine Online",
-    info: "Publish your website with a single click and take your brand to the world.",
-    imgSrc: "/assets/bento1.svg", // Rocket launching or website going live
-    alt: "Website launch and publication",
-  },
-];
-
 export const reviews = [
   {
-    name: "Jack",
-    username: "@jack",
-    body: "I've never seen anything like this before. It's amazing. I love it.",
+    name: "Elon Musk",
+    username: "@elonmusk",
+    body: "Utilizar o Nitro foi um divisor de águas para o meu negócio. As vendas dispararam!",
   },
   {
-    name: "Jill",
-    username: "@jill",
-    body: "I don't know what to say. I'm speechless. This is amazing.",
+    name: "Jeff Bezos",
+    username: "@jeffbezos",
+    body: "O Nitro transformou a maneira como gerencio minha empresa. Resultados incríveis!",
   },
   {
-    name: "John",
-    username: "@john",
-    body: "I'm at a loss for words. This is amazing. I love it.",
+    name: "Mark Zuckerberg",
+    username: "@zuck",
+    body: "Consegui personalizar minha loja e aumentar as vendas rapidamente.",
   },
   {
-    name: "Jane",
-    username: "@jane",
-    body: "I'm at a loss for words. This is amazing. I love it.",
+    name: "Steve Jobs",
+    username: "@stevejobs",
+    body: "A plataforma Nitro é intuitiva e poderosa. Me ajudou a alcançar novos patamares.",
   },
   {
-    name: "Jenny",
-    username: "@jenny",
-    body: "I'm at a loss for words. This is amazing. I love it.",
+    name: "Linus Torvalds",
+    username: "@linus",
+    body: "O Nitro é essencial para qualquer negócio que deseja crescer e se destacar no mercado.",
   },
   {
-    name: "James",
-    username: "@james",
-    body: "I'm at a loss for words. This is amazing. I love it.",
+    name: "Bill Gates",
+    username: "@billgates",
+    body: "Recomendo o Nitro para todos que querem otimizar suas vendas e gestão de negócios.",
   },
 ];
