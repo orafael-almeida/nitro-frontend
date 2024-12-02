@@ -1,7 +1,10 @@
 import Container from "@/components/global/container";
+import Icons from "@/components/global/icons";
 import Wrapper from "@/components/global/wrapper";
 import { BorderBeam } from "@/components/ui/border-beam";
 import { Button } from "@/components/ui/button";
+import SectionBadge from "@/components/ui/section-badge";
+import { features, perks } from "@/constants";
 import { ArrowRight, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -74,7 +77,7 @@ const HomePage = () => {
                   className="rounded-md lg:rounded-xl bg-foreground/10 shadow-2xl ring-1 ring-border"
                 />
 
-                <BorderBeam 
+                <BorderBeam
                   size={250}
                   duration={12}
                   delay={9}
@@ -82,6 +85,84 @@ const HomePage = () => {
                   colorTo="#696DFF"
                 />
               </div>
+            </div>
+          </div>
+        </Container>
+      </Wrapper>
+
+      {/* COMO FUNCIONA */}
+      <Wrapper className="flex flex-col items-center justify-center py-12 relative">
+        <Container>
+          <div className="max-w-md mx-auto text-start md:text-center">
+            <SectionBadge title="O processo" />
+            <h2 className="text-3xl lg:text-4xl font-semibold mt-6">
+              Apenas três passos para alavancar as vendas
+            </h2>
+            <p className="text-muted-foreground mt-6">
+              Tenha acesso a dados em tempo real e crier relatórios
+              personalizados para aumentar o seu faturamento.
+            </p>
+          </div>
+        </Container>
+
+        <Container>
+          <div className="flex flex-col items-center justify-center py-10 md:py-20 w-full">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full divide-x-0 md:divide-x divide-y md:divide-y-0 divide-gray-900 first:border-l-2 lg:first:border-none first:border-gray-900">
+              {perks.map((perk) => (
+                <div
+                  key={perk.title}
+                  className="flex flex-col items-start px-4 md:px-6 lg:px-8 lg:py-6 py-4"
+                >
+                  <div className="flex items-center justify-center">
+                    <perk.icon className="w-8 h-8" />
+                  </div>
+                  <h3 className="text-lg font-medium mt-4">{perk.title}</h3>
+                  <p className="text-muted-foreground mt-2 text-start lg:text-start">
+                    {perk.info}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </Container>
+      </Wrapper>
+
+      {/* RECURSOS */}
+      <Wrapper className="flex flex-col items-center justify-center py-12 relative">
+        <Container className="max-w-md mx-auto text-start md:text-center">
+          <SectionBadge title="Recursos" />
+          <h2 className="text-3xl lg:text-4xl font-semibold mt-6">
+            Descubra recursos poderodos do Nitro
+          </h2>
+          <p className="text-muted-foreground mt-6">
+            Nitro oferece uma série de recursos para você alavancar o seu
+            negócio.
+          </p>
+        </Container>
+
+        <Container>
+          <div className="flex items-center justify-center mx-auto mt-8">
+            <Icons.feature className="w-auto h-80" />
+          </div>
+        </Container>
+
+        <Container>
+          <div className="flex flex-col items-center justify-center py-10 md:py-20 w-full">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full gap-8">
+              {features.map((feature) => (
+                <div
+                  key={feature.title}
+                  className="flex flex-col items-start px-0"
+                >
+                  <div className="flex items-center justify-center">
+                    <feature.icon className="w-8 h-8" />
+                  </div>
+                  <h3 className="text-lg font-medium">{feature.title}</h3>
+                  <p className="text-muted-foreground mt-2 text-start">
+                    {feature.info}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
         </Container>

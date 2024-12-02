@@ -26,6 +26,9 @@ const Navbar = () => {
               <Link href="#pricing">Home</Link>
             </li>
             <li className="hover:text-foreground/80 text-sm">
+              <Link href="#pricing">Sobre</Link>
+            </li>
+            <li className="hover:text-foreground/80 text-sm">
               <Link href="#pricing">Recursos</Link>
             </li>
             <li className="hover:text-foreground/80 text-sm">
