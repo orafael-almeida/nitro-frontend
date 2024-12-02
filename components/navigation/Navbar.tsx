@@ -6,7 +6,7 @@ const Navbar = () => {
   const user = false;
 
   return (
-    <header className="px-4 h-14 sticky top-0 inset-x-0 w-full bg-background/40 backdrop-blur-lg border-b border-border z-50">
+    <header className="px-4 h-16 sticky top-0 inset-x-0 w-full bg-background/40 backdrop-blur-lg border-b border-border z-50">
       <div className="flex items-center justify-between h-full mx-auto md:max-w-screen-xl">
         <div className="flex items-start">
           <Link href="/" className="flex items-center gap-2">
@@ -23,19 +23,22 @@ const Navbar = () => {
         <nav className="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform">
           <ul className="flex items-center justify-between gap-8">
             <li className="hover:text-foreground/80 text-sm">
-              <Link href="#pricing">Home</Link>
+              <Link href="#home">Home</Link>
             </li>
             <li className="hover:text-foreground/80 text-sm">
-              <Link href="#pricing">Sobre</Link>
+              <Link href="#about">Sobre</Link>
             </li>
             <li className="hover:text-foreground/80 text-sm">
-              <Link href="#pricing">Recursos</Link>
+              <Link href="#features">Recursos</Link>
             </li>
             <li className="hover:text-foreground/80 text-sm">
               <Link href="#pricing">Planos</Link>
             </li>
             <li className="hover:text-foreground/80 text-sm">
-              <Link href="#pricing">Blog</Link>
+              <Link href="#testmonials">Cases</Link>
+            </li>
+            <li className="hover:text-foreground/80 text-sm">
+              <Link href="#news">News</Link>
             </li>
           </ul>
         </nav>
@@ -45,12 +48,7 @@ const Navbar = () => {
             "user button"
           ) : (
             <>
-              <Link
-                href="sign-in"
-                className={buttonVariants({ size: "sm", variant: "ghost" })}
-              >
-                Login
-              </Link>
+              
               <Link
                 href="sign-up"
                 className={buttonVariants({
