@@ -107,10 +107,10 @@ Please, check the port.
 
 Contributions, issues, and feature requests are welcome!
 
-1. Fork it (<https://github.com/yourname/yourproject/fork>)
-2. Create your feature branch (`git checkout -b feature/fooBar`)
-3. Commit your changes (`git commit -am 'Add some fooBar'`)
-4. Push to the branch (`git push origin feature/fooBar`)
+1. Fork it (<https://github.com/orafael-almeida/nitro-frontend/fork>)
+2. Create your feature branch (`git checkout -b new-feature`)
+3. Commit your changes (`git commit -am 'Add some feature'`)
+4. Push to the branch (`git push origin new-feature`)
 5. Create a new Pull Request
 
 ## <a name="authors">👥 Authors</a>
