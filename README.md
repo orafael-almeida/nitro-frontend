@@ -103,7 +103,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to view the 
 Please, check the port.
 
 
-## <a name="constributing">🤝 Contributing</a>
+## <a name="contributing">🤝 Contributing</a>
 
 Contributions, issues, and feature requests are welcome!
 
