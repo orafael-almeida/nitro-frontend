@@ -58,7 +58,7 @@ export const pricingCards = [
     price: "Grátis",
     duration: "",
     highlight: "Key features",
-    buttonText: "Start for free",
+    buttonText: "Comece Grátis",
     features: [
       "10 Ambientes habilitados",
       "2 Membros na equipe",
@@ -73,7 +73,7 @@ export const pricingCards = [
     price: "R$ 199",
     duration: "month",
     highlight: "Key features",
-    buttonText: "Upgrade to Pro",
+    buttonText: "Decole com Nitro",
     features: [
       "10 Ambientes habilitados",
       "20 Membros na equipe",
@@ -88,7 +88,7 @@ export const pricingCards = [
     price: "R$ 499",
     duration: "month",
     highlight: "Everything in Starter, plus",
-    buttonText: "Upgrade to Enterprise",
+    buttonText: "Ao Infinito e Além!",
     features: [
       "Ambientes ilimitados",
       "Até 100 Membros na equipe",
